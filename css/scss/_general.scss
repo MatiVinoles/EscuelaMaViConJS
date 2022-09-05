@@ -1,0 +1,36 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-image: url(../assets/fototeclado2.png);
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+.tituloDos {
+    font: {
+        family: "roboto condensed", sans-serif;
+        weight: bold;
+        size: 60px;
+    }
+    -webkit-text-stroke: 1px black;
+    color: $verde;
+    text-align: center;
+    margin-bottom: 20px;
+}
+p {
+    font-family: "roboto condensed", sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    color: #000000;
+    line-height: 1.6;
+}
+.subtitulos {
+    text-decoration: none;
+    color: $rojo;
+    font-family: "roboto condensed" , sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 35px;
+}
+iframe {
+    border-radius: 20px;
+}
