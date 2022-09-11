@@ -141,13 +141,4 @@ footer .bi-whatsapp, footer .bi-instagram, footer .bi-twitter, footer .bi-facebo
   font-size: 30px;
   text-align: center;
   margin: 10px;
-}
-
-.description {
-  height: 25px;
-  overflow: hidden;
-  transition: height 0.3s ease-in 0.3s;
-}
-.description:hover {
-  height: 160px;
 }/*# sourceMappingURL=estilos.css.map */
