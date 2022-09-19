@@ -141,4 +141,156 @@ footer .bi-whatsapp, footer .bi-instagram, footer .bi-twitter, footer .bi-facebo
   font-size: 30px;
   text-align: center;
   margin: 10px;
+}
+
+.boton-carrito {
+  border: none;
+  color: #d7002d;
+  font-size: 55px;
+  border-radius: 70%;
+  background-color: transparent;
+  padding: 10px 20px;
+  transition: all 0.3s;
+}
+.boton-carrito:hover {
+  cursor: pointer;
+  color: #057c5f;
+}
+
+.producstOnCart {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
+  background-color: #4b524e;
+  width: 350px;
+  height: 500px;
+  color: #f0f0f0;
+  z-index: 15;
+  position: fixed;
+  top: 20px;
+  right: 0;
+  text-align: center;
+  -webkit-animation: fade 1s;
+          animation: fade 1s;
+}
+.producstOnCart ul {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.producstOnCart .buyItem {
+  border-bottom: #aaa 1px solid;
+  width: 90%;
+  padding: 10px 0;
+  display: flex;
+}
+.producstOnCart img {
+  width: 90px;
+}
+.producstOnCart .top {
+  display: flex;
+  background-color: #057c5f;
+  padding: 5px 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+.producstOnCart .top button {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  color: #d7002d;
+  cursor: pointer;
+}
+.producstOnCart .top button:hover {
+  color: #fd0101;
+}
+.producstOnCart .top h3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+.producstOnCart .empty {
+  justify-self: center;
+  margin: 150px auto;
+}
+.producstOnCart .buyItems h6 {
+  margin-bottom: 10px;
+}
+.producstOnCart .buyItems button {
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding: 0 6px;
+  border: none;
+}
+.producstOnCart .buyItems button:active {
+  color: #96c8cc;
+}
+.producstOnCart .buyItems div {
+  padding: 0 20px;
+}
+.producstOnCart .checkout {
+  font-size: 0.9rem;
+  margin: 20px auto;
+  border: none;
+  background-color: #057c5f;
+  padding: 10px 20px;
+  color: #eee;
+  cursor: pointer;
+}
+.producstOnCart .overlay {
+  overflow: hidden;
+  display: inline-block;
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.producstOnCart::-webkit-scrollbar {
+  display: none;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes fade {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: none;
+  }
+}
+.producstOnCart::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.hide {
+  display: none;
+  visibility: none;
 }/*# sourceMappingURL=estilos.css.map */

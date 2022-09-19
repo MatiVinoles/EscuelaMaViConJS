@@ -15,6 +15,10 @@
         <link rel="stylesheet" href="../css/estilos.css">
         <link rel="stylesheet" href="../css/media.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+        <!--Referencia CSS-->
+        <link href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <!--Script JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
     </head>
 <body>
     <header>
@@ -52,8 +56,48 @@
             </div>
         </div>
     </section>
+
+
+
+
     <section class="container-fluid">
-        <section class="row row-cols-sm-1 row row-cols-md-2 row row-cols-lg-3 row row-cols-xl-4 ">
+      <button class="boton-carrito col-md-1 position-absolute top-50 end-0 translate-middle-y">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="contadorCarrito">0</span>
+      </button>
+    </section>
+
+    <div class="producstOnCart hide">
+        <div class="overlay"></div>
+        <div class="top">
+            <button id="closeButton">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+            <h3>Carrito</h3>
+        </div>
+        <ul id="buyItems">
+            <h4 class="empty">Tu carrito está vacío</h4>
+            <!--<li class="buyItem">
+                <div>
+                    <div>
+                        <button>-</button>
+                        <span class="countOfProduct">1</span>
+                        <button>+</button>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+        <button class="btn checkout hidden">Comprar</button>
+    </div>
+
+
+
+
+
+
+
+    <section class="container-fluid">
+        <section class="row row-cols-sm-1 row row-cols-md-2 row row-cols-lg-3 row row-cols-xl-4 justify-content-center">
             <div class="col d-flex justify-content-center mb-4">
                 <div class="card text-center mb-2 rounded" style="width: 18rem;">
                     <img src="../assets/cards/card-guitarra.jpg" class="card-img-top" alt="Guitarra eléctrica">
@@ -92,8 +136,10 @@
         </section>
     </section>
 
+
+
     <section class="container-fluid">
-        <section class="row row-cols-sm-1 row row-cols-md-2 row row-cols-lg-3 row row-cols-xl-4 ">
+        <section class="row row-cols-sm-1 row row-cols-md-2 row row-cols-lg-3 row row-cols-xl-4 justify-content-center ">
             <div class="col d-flex justify-content-center mb-4">
                 <div class="card text-center mb-2 rounded" style="width: 18rem;">
                     <img src="../assets/cards/clase_individual_guitarra.jpg" class="card-img-top" alt="guitarra electrica">
@@ -133,6 +179,10 @@
     </section>
 
 
+
+
+
+
     <footer class="d-flex align-items-center">
         <section class="container-fluid">
             <div class="row">
@@ -154,7 +204,6 @@
     </footer>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-        <!--Javascript de seccion "tienda"-->
-        <script src="/javascript/index.js"></script>
-</body>
+    <!--Javascript de seccion "tienda"-->
+    <script src="/javascript/index.js"></script>
 </html>
