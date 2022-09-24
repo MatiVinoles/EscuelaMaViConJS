@@ -146,7 +146,7 @@ footer .bi-whatsapp, footer .bi-instagram, footer .bi-twitter, footer .bi-facebo
 .boton-carrito {
   border: none;
   color: #d7002d;
-  font-size: 55px;
+  font-size: 50px;
   border-radius: 70%;
   background-color: transparent;
   padding: 10px 20px;
@@ -262,6 +262,25 @@ footer .bi-whatsapp, footer .bi-instagram, footer .bi-twitter, footer .bi-facebo
   height: 100vh;
   z-index: -1;
   background: rgba(0, 0, 0, 0.5);
+}
+.producstOnCart .button-plus {
+  background-color: transparent;
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+}
+.producstOnCart .button-minus {
+  background-color: transparent;
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+}
+
+.stopScrolling {
+  height: 100vh;
+  overflow: hidden;
 }
 
 .producstOnCart::-webkit-scrollbar {
