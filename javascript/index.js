@@ -18,58 +18,7 @@ closeShopCart.addEventListener('click', closeCart);
 overlay.addEventListener('click', closeCart);
 
 
-
 //Interactividad de la Tienda
-
-
-//const Clickbutton = document.querySelectorAll(`.btn`)
-//let carrito = []
-//
-//if (document.readyState == 'loading') {
-//    document.addEventListener("DOMContentLoaded", ready)
-//} else {
-//    ready()
-//}
-//
-//Clickbutton.forEach(btn => {
-//    btn.addEventListener(`click`, addToCarritoItem)
-//})
-//
-//function addToCarritoItem(e){
-//    const button = e.target
-//    const item = button.closest(`.card`)
-//    const tituloDelItem = item.querySelector(`.card-title`).textContent;
-//    const PrecioDelItem = item.querySelector(`.precio`).textContent;
-//    
-//    const newItem = {
-//        titulo: tituloDelItem,
-//        precio: PrecioDelItem,
-//        cantidad: 1
-//    }
-//
-//    addItemCarrito(newItem)
-//    saveToLocalStorage()
-//}
-//
-//function addItemCarrito(newItem){
-//    carrito.push(newItem)
-//    console.log(carrito)
-//}
-//
-//function saveToLocalStorage() {
-//localStorage.setItem(`miCarrito`, JSON.stringify(carrito))
-//}
-//
-//function readLocalStorage() {
-//carrito = localStorage.getItem(`miCarrito`)
-//carrito = JSON.parse (carrito)
-//console.log(carrito)
-//}
-//
-//function ready() {
-//    readLocalStorage()
-//}
-
 
 //Retomar productos del carrito del local storage
 let productsInCart = JSON.parse(localStorage.getItem(`shoppingCart`));
@@ -155,7 +104,7 @@ products.forEach(item => {
                 id: productID,
                 count: 1,
                 price: +productPrice,
-                basePrice: +productPrice,
+                basePrice: +productPrice, 
             }
             updateProductsInCart(product);
             updateShoppingCartHTML();
@@ -189,6 +138,8 @@ parentElement.addEventListener(`click`, (e) => {
 updateShoppingCartHTML();
 
 
+
+//Alert del botón Comprar
 const btn = document.querySelector(`.checkout`)
 btn.addEventListener(`click`, () => {
 
@@ -199,6 +150,7 @@ Swal.fire ({
 })
 
 })
+
 
 
 

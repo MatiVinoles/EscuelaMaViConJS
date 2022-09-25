@@ -213,7 +213,7 @@ footer .bi-whatsapp, footer .bi-instagram, footer .bi-twitter, footer .bi-facebo
 .producstOnCart .top button:hover {
   color: #fd0101;
 }
-.producstOnCart .top h3 {
+.producstOnCart .top h4 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -248,6 +248,16 @@ footer .bi-whatsapp, footer .bi-instagram, footer .bi-twitter, footer .bi-facebo
   border: none;
   background-color: #057c5f;
   padding: 10px 20px;
+  color: #eee;
+  cursor: pointer;
+}
+.producstOnCart .clearCart {
+  font-size: 0.9rem;
+  margin: 20px auto;
+  border: none;
+  background-color: #d7002d;
+  padding: 10px 20px;
+  margin-left: 20px;
   color: #eee;
   cursor: pointer;
 }

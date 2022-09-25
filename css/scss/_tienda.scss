@@ -72,7 +72,7 @@
             }
         }
         
-        h3 {
+        h4 {
             position: absolute;
             left: 50%;
             top: 50%;
@@ -116,6 +116,16 @@
         border: none;
         background-color: $verde;
         padding: 10px 20px;
+        color: #eee;
+        cursor: pointer;
+    }
+    .clearCart {
+        font-size: 0.9rem;
+        margin: 20px auto;
+        border: none;
+        background-color: $rojo;
+        padding: 10px 20px;
+        margin-left: 20px;
         color: #eee;
         cursor: pointer;
     }
