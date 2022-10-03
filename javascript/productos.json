@@ -1,0 +1,8 @@
+[
+    {"id":1, "name":"Curso de Guitarra", "price":9500, "image":"../assets/cards/card-guitarra.jpg", "description":""},
+    {"id":2, "name":"Curso de Bajo", "price":10000, "image":"../assets/cards/card-bajo.jpg", "description":""},
+    {"id":3, "name":"Curso de Teclado", "price":11500, "image":"../assets/cards/card-teclado.jpg", "description":""},
+    {"id":4, "name":"Clase individual de guitarra", "price":850, "image":"../assets/cards/clase_individual_guitarra.jpg", "description":""},
+    {"id":5, "name":"Clase individual de bajo", "price":950, "image":"../assets/cards/clase_individual_bajo.jpg", "description":""},
+    {"id":6, "name":"Clase individual de teclado", "price":1100, "image":"../assets/cards/clase_individual_teclado.jpg", "description":""}
+]

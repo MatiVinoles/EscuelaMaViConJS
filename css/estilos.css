@@ -143,6 +143,17 @@ footer .bi-whatsapp, footer .bi-instagram, footer .bi-twitter, footer .bi-facebo
   margin: 10px;
 }
 
+.shop-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, auto));
+  gap: 1.5rem;
+}
+
+.card-margin {
+  margin: auto;
+  width: 18rem;
+}
+
 .boton-carrito {
   border: none;
   color: #d7002d;

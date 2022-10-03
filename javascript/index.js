@@ -20,6 +20,32 @@ overlay.addEventListener('click', closeCart);
 
 //Interactividad de la Tienda
 
+
+fetch(`/javascript/productos.json`)
+.then((res) => res.json())
+.then( (data => {
+    let grillaProductos = document.getElementsByClassName("shop-content")[0]
+    data.forEach( (product) => {
+        const div = document.createElement(`div`)
+        div.classList.add("card")
+        div.classList.add("text-center")
+        div.classList.add("mb-2")
+        div.classList.add("rounded")
+        div.classList.add("card-margin")
+
+        div.innerHTML = `
+        <img src="${product.image}" class="card-img-top product-image" alt="Guitarra eléctrica">
+        <div class="card-body">
+          <h5 class="card-title productName">${product.name}</h5>
+          <p class="card-text description">${product.description}</p>
+          <h5 class="text-success price">Precio: <span class="priceValue">${product.price}</span></h5>
+          <button class="btn btn-danger btn-outline-light addToCart" data-product-id="${product.id}">Agregar al carrito</button>
+        </div>`
+        div.getElementsByClassName("addToCart")[0].addEventListener(`click`,addToCart)
+        grillaProductos.append(div)
+    })
+}))
+
 //Retomar productos del carrito del local storage
 let productsInCart = JSON.parse(localStorage.getItem(`shoppingCart`));
 
@@ -70,7 +96,7 @@ const updateShoppingCartHTML = function () {
         cartSumPrice.innerHTML = `$` + countTheSumPrice ();
     }
     else {
-        document.querySelector(`checkout`).classList.add(`hidden`);
+        document.querySelector(`.checkout`).classList.add(`hidden`);
         parentElement.innerHTML = `<h4 class="empty">Tu carrito está vacío</h4>`;
         cartSumPrice.innerHTML = ``;
     }
@@ -91,26 +117,23 @@ function updateProductsInCart(product) {
 
 
 //Funcion que agrega los items al carrito
-products.forEach(item => {
-    item.addEventListener(`click`, (e) => {
-        if (e.target.classList.contains(`addToCart`)) {
-            const productID = e.target.dataset.productID; 
-            const productName = item.querySelector(`.productName`).innerHTML;
-            const productPrice = item.querySelector(`.priceValue`).innerHTML;
-            const productImage = item.querySelector(`img`).src;
-            let product = {
-                name: productName,
-                image: productImage,
-                id: productID,
-                count: 1,
-                price: +productPrice,
-                basePrice: +productPrice, 
-            }
-            updateProductsInCart(product);
-            updateShoppingCartHTML();
-        }
-    });
-});
+function addToCart(event) {
+    let item = event.target.parentElement.parentElement
+    const productID = event.target.dataset.productID; 
+    const productName = item.querySelector(`.productName`).innerHTML;
+    const productPrice = item.querySelector(`.priceValue`).innerHTML;
+    const productImage = item.querySelector(`img`).src;
+    let product = {
+        name: productName,
+        image: productImage,
+        id: productID,
+        count: 1,
+        price: +productPrice,
+        basePrice: +productPrice, 
+    }
+    updateProductsInCart(product);
+    updateShoppingCartHTML();
+}
 
 
 //Funcion para los botones de agregar o quitar items del carrito
@@ -150,6 +173,12 @@ Swal.fire ({
 })
 
 })
+
+
+
+
+
+
 
 
 
