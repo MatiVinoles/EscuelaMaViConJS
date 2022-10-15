@@ -20,7 +20,7 @@ overlay.addEventListener('click', closeCart);
 
 //Interactividad de la Tienda
 
-
+//Fetch de los productos de productos.json para colocarlos en el HTML
 fetch(`/javascript/productos.json`)
 .then((res) => res.json())
 .then( (data => {
@@ -31,15 +31,14 @@ fetch(`/javascript/productos.json`)
         div.classList.add("text-center")
         div.classList.add("mb-2")
         div.classList.add("rounded")
-        div.classList.add("card-margin")
-
+        
         div.innerHTML = `
         <img src="${product.image}" class="card-img-top product-image" alt="Guitarra eléctrica">
         <div class="card-body">
           <h5 class="card-title productName">${product.name}</h5>
           <p class="card-text description">${product.description}</p>
-          <h5 class="text-success price">Precio: <span class="priceValue">${product.price}</span></h5>
-          <button class="btn btn-danger btn-outline-light addToCart" data-product-id="${product.id}">Agregar al carrito</button>
+          <h5 class="text-success price">Precio: <span class="priceValue">$${product.price}</span></h5>
+          <button class="btn btn-danger btn-outline-light addToCart" data-productId="${product.id}">Agregar al carrito</button>
         </div>`
         div.getElementsByClassName("addToCart")[0].addEventListener(`click`,addToCart)
         grillaProductos.append(div)
@@ -59,6 +58,7 @@ if(!productsInCart){
 //Declarando variables a usar
 const parentElement = document.querySelector(`#buyItems`);
 const cartSumPrice = document.querySelector(`#sum-prices`);
+const cartSumPriceCart = document.querySelector(`#sum-prices-cart`);
 const products = document.querySelectorAll(`.product`);
 
 
@@ -66,7 +66,7 @@ const products = document.querySelectorAll(`.product`);
 const countTheSumPrice = function () {
     let sum = 0;
     productsInCart.forEach(item => {
-        sum += item.price;
+        sum += parseInt(item.price);
     });
     return sum;
 }
@@ -93,12 +93,14 @@ const updateShoppingCartHTML = function () {
         });
         parentElement.innerHTML = result.join(``);
         document.querySelector(`.checkout`).classList.remove(`hidden`);
-        cartSumPrice.innerHTML = `$` + countTheSumPrice ();
+        cartSumPrice.innerHTML = `$` + countTheSumPrice();
+        cartSumPriceCart.innerHTML = `$` + countTheSumPrice();
     }
     else {
         document.querySelector(`.checkout`).classList.add(`hidden`);
         parentElement.innerHTML = `<h4 class="empty">Tu carrito está vacío</h4>`;
         cartSumPrice.innerHTML = ``;
+        cartSumPriceCart.innerHTML = ``;
     }
 }
 
@@ -119,7 +121,7 @@ function updateProductsInCart(product) {
 //Funcion que agrega los items al carrito
 function addToCart(event) {
     let item = event.target.parentElement.parentElement
-    const productID = event.target.dataset.productID; 
+    const productID = event.target.dataset.productid; 
     const productName = item.querySelector(`.productName`).innerHTML;
     const productPrice = item.querySelector(`.priceValue`).innerHTML;
     const productImage = item.querySelector(`img`).src;
@@ -128,8 +130,8 @@ function addToCart(event) {
         image: productImage,
         id: productID,
         count: 1,
-        price: +productPrice,
-        basePrice: +productPrice, 
+        price: productPrice.substring(1),
+        basePrice: productPrice.substring(1), 
     }
     updateProductsInCart(product);
     updateShoppingCartHTML();
@@ -165,7 +167,7 @@ updateShoppingCartHTML();
 //Alert del botón Comprar
 const btn = document.querySelector(`.checkout`)
 btn.addEventListener(`click`, () => {
-
+    clearCarrito()
 Swal.fire ({
     icon: `success`,
     title: `Gracias por tu compra`,
@@ -173,6 +175,29 @@ Swal.fire ({
 })
 
 })
+
+//Alert (y función de remover items del carrito) del botón Limpiar
+let listaDelCarrito = document.querySelector("ul")
+const clearCart = document.querySelector(`.clearCart`)
+clearCart.addEventListener(`click`, (event) => { 
+    clearCarrito()
+
+    Swal.fire ({
+        icon: `success`,
+        title: `El carrito ha sido limpiado`,
+})
+
+})
+
+
+function clearCarrito(){
+    let carrito = document.querySelector(`#buyItems`);
+    carrito.innerHTML = '<h4 class="empty">Tu carrito está vacío</h4>' 
+    cartSumPrice.innerHTML = ``;
+    cartSumPriceCart.innerHTML = ``;
+    productsInCart = []
+    localStorage.clear()
+}
 
 
 
