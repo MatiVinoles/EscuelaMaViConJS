@@ -29,9 +29,12 @@ fetch(`/javascript/productos.json`)
         const div = document.createElement(`div`)
         div.classList.add("card")
         div.classList.add("text-center")
-        div.classList.add("mb-2")
         div.classList.add("rounded")
-        
+        div.classList.add("col-md-3")
+        div.classList.add("mx-4")
+        div.classList.add("my-4")
+        div.classList.add("cardWidth")
+
         div.innerHTML = `
         <img src="${product.image}" class="card-img-top product-image" alt="Guitarra eléctrica">
         <div class="card-body">
