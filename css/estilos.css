@@ -151,6 +151,7 @@ footer .bi-whatsapp, footer .bi-instagram, footer .bi-twitter, footer .bi-facebo
   border: none;
   color: #d7002d;
   font-size: 50px;
+  width: 220px;
   border-radius: 70%;
   background-color: transparent;
   transition: all 0.3s;
