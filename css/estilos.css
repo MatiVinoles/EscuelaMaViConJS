@@ -153,7 +153,6 @@ footer .bi-whatsapp, footer .bi-instagram, footer .bi-twitter, footer .bi-facebo
   font-size: 50px;
   border-radius: 70%;
   background-color: transparent;
-  padding: 10px 20px;
   transition: all 0.3s;
 }
 .boton-carrito:hover {
