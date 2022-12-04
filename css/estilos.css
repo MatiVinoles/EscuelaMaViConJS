@@ -59,13 +59,13 @@ footer .bi-whatsapp:hover {
   color: #25d366;
 }
 footer .bi-instagram:hover {
-  color: #E1306C;
+  color: #e1306c;
 }
 footer .bi-twitter:hover {
-  color: #1D9BF0;
+  color: #1d9bf0;
 }
 footer .bi-facebook:hover {
-  color: #0165E1;
+  color: #0165e1;
 }
 footer .bi-envelope:hover {
   color: #c71610;
@@ -92,7 +92,8 @@ footer .miNombre:hover {
   color: #d7002d;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   background-image: url(../assets/fototeclado2.png);
@@ -137,7 +138,12 @@ iframe {
     height: 300px;
   }
 }
-footer .bi-whatsapp, footer .bi-instagram, footer .bi-twitter, footer .bi-facebook, footer .bi-envelope, footer .bi-geo-alt {
+footer .bi-whatsapp,
+footer .bi-instagram,
+footer .bi-twitter,
+footer .bi-facebook,
+footer .bi-envelope,
+footer .bi-geo-alt {
   font-size: 30px;
   text-align: center;
   margin: 10px;
@@ -168,7 +174,7 @@ footer .bi-whatsapp, footer .bi-instagram, footer .bi-twitter, footer .bi-facebo
   overflow-y: scroll;
   scroll-behavior: smooth;
   -ms-scroll-chaining: none;
-      overscroll-behavior: contain;
+  overscroll-behavior: contain;
   background-color: #4b524e;
   width: 350px;
   height: 500px;
@@ -179,7 +185,7 @@ footer .bi-whatsapp, footer .bi-instagram, footer .bi-twitter, footer .bi-facebo
   right: 0;
   text-align: center;
   -webkit-animation: fade 1s;
-          animation: fade 1s;
+  animation: fade 1s;
 }
 .producstOnCart ul {
   text-align: left;
@@ -326,4 +332,4 @@ footer .bi-whatsapp, footer .bi-instagram, footer .bi-twitter, footer .bi-facebo
 .hide {
   display: none;
   visibility: none;
-}/*# sourceMappingURL=estilos.css.map */
+} /*# sourceMappingURL=estilos.css.map */

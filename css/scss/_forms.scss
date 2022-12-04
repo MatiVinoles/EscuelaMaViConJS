@@ -1,25 +1,23 @@
 form {
-    width: 400px;
-    padding:16px;
-    background-color: #4b524e;
-    
-    label{
-        display: inline-block;
-	    width: 250px;
-	    font-weight:bold;
-        color: #fcfcfc;
-        padding: 5px;
+  width: 400px;
+  padding: 16px;
+  background-color: #4b524e;
 
-}
-
+  label {
+    display: inline-block;
+    width: 250px;
+    font-weight: bold;
+    color: #fcfcfc;
+    padding: 5px;
+  }
 }
 .tituloFormularioContacto {
-    text-align: center;
-    font-size: 30px;
-    color: $verde;
+  text-align: center;
+  font-size: 30px;
+  color: $verde;
 }
 .tituloFormularioTrabajo {
-    text-align: center;
-    font-size: 30px;
-    color: $rojo;
+  text-align: center;
+  font-size: 30px;
+  color: $rojo;
 }
